@@ -1,0 +1,13 @@
+Copyright (c) Jason Liao / NateMind
+
+All rights reserved.
+
+This public proof edition is provided for review, evaluation, and architectural reference only.
+
+No part of this repository may be reproduced, modified, distributed, sublicensed, deployed in production, commercially integrated, or used to create derivative implementations without prior written authorization from the copyright holder.
+
+The architectural concepts, governance logic, admission control structures, artifact verification model, protocol framing, and related materials contained in this repository are proprietary intellectual property of Jason Liao / NateMind.
+
+Permission is not granted for open-source redistribution, commercial use, or protocol replication.
+
+For licensing, research collaboration, or authorized integration inquiries, formal written permission is required.
