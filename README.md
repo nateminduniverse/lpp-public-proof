@@ -90,4 +90,5 @@ See:
 The architectural concepts, governance logic, admission control framing, artifact verification model, and associated implementation design represented in this repository are proprietary intellectual property of Jason Liao / NateMind.
 
 No reproduction, derivative commercial integration, protocol replication, or unauthorized implementation is permitted without prior written authorization.
+
 For licensing, research collaboration, or authorized integration inquiries, formal contact is required.
