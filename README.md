@@ -84,6 +84,9 @@ See:
 - `docs/architecture-summary.md`
 - `docs/public-scope.md`
 - `docs/ip-notice.md`
+- `docs/technical-positioning.md`
+- `docs/validation-status.md`
+- `docs/mind-universe-governance-stack.md`
 
 ## Intellectual Property Notice
 
