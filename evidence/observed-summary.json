@@ -1,0 +1,62 @@
+[
+  {
+    "id": "EX-01",
+    "scenario": "Valid execution",
+    "expected_decision": "ADMIT",
+    "expected_reason_code": "OK",
+    "observed_decision": "ADMIT",
+    "observed_reason_code": "OK",
+    "artifact_count_in_isolated_run": 2,
+    "status": "PASS"
+  },
+  {
+    "id": "EX-02",
+    "scenario": "No Permit",
+    "expected_decision": "DENY",
+    "expected_reason_code": "NO_PERMIT",
+    "observed_decision": "DENY",
+    "observed_reason_code": "NO_PERMIT",
+    "artifact_count_in_isolated_run": 1,
+    "status": "PASS"
+  },
+  {
+    "id": "EX-03",
+    "scenario": "Scope violation",
+    "expected_decision": "DENY",
+    "expected_reason_code": "SCOPE_FAIL",
+    "observed_decision": "DENY",
+    "observed_reason_code": "SCOPE_FAIL",
+    "artifact_count_in_isolated_run": 1,
+    "status": "PASS"
+  },
+  {
+    "id": "EX-04",
+    "scenario": "Permit tampering",
+    "expected_decision": "DENY",
+    "expected_reason_code": "SIG_FAIL",
+    "observed_decision": "DENY",
+    "observed_reason_code": "SIG_FAIL",
+    "artifact_count_in_isolated_run": 2,
+    "status": "PASS"
+  },
+  {
+    "id": "EX-05",
+    "scenario": "Replay",
+    "expected_decision": "DENY",
+    "expected_reason_code": "REPLAY",
+    "observed_decision": "DENY",
+    "observed_reason_code": "REPLAY",
+    "artifact_count_in_isolated_run": 3,
+    "status": "PASS"
+  },
+  {
+    "id": "EX-06",
+    "scenario": "Post-revocation execution",
+    "expected_decision": "DENY",
+    "expected_reason_code": "REVOKED",
+    "observed_decision": "DENY",
+    "observed_reason_code": "REVOKED",
+    "artifact_count_in_isolated_run": 2,
+    "status": "PASS"
+  }
+]

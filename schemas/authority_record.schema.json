@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lpp.example/schemas/authority_record",
+  "title": "AuthorityRecord",
+  "type": "object",
+  "required": ["authority_id","principal_id","state","expiry","scope_id"],
+  "additionalProperties": false,
+  "properties": {
+    "authority_id": { "type": "string", "examples": ["auth:alice:001"] },
+    "principal_id": { "type": "string" },
+    "state":        { "type": "string", "enum": ["ACTIVE","REVOKED","EXPIRED"] },
+    "expiry":       { "type": "integer", "description": "Unix epoch seconds" },
+    "scope_id":     { "type": "string" },
+    "revoked_at":   { "type": ["integer","null"], "description": "Unix epoch, set on revocation" }
+  }
+}

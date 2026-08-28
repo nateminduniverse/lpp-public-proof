@@ -1,0 +1,17 @@
+{
+  "artifact_id": "aa:7857f924-49b4-4afb-9616-233912eb8e90",
+  "authority_id": "auth:alice:001",
+  "authority_state_hash": "9f4d9ad8ad9bb9848ea069ce2efbe1fff5f601ea72134b8283477c72397e79a4",
+  "cp_signature": "nSFSgPOek9uzxtp00S9oSC8lD-MYr-sf0AfhbA5Gf1YAewMjMSoEH_BJ8Y5B95PF5f4Bu9P4frAq197psQYGBg",
+  "decision": "ADMIT",
+  "intent_hash": "2368893f6d09c167119139defb10dedd108730a1588e26ecda18bfe57604e542",
+  "nonce": "65171cf326d9f8142a5f72cd59f4cd4a7a583d428614dba6318bbd4d48a05c4f",
+  "permit_id": "6078c677-b46f-4c82-88a4-1e9114f3e65b",
+  "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+  "prev_artifact_hash": "d9b01c22530c70909c8eef6861cf17cd11cbd62cbe49b02ce7ff78c702128470",
+  "principal_id": "principal:alice",
+  "reason_code": "OK",
+  "result_hash": "2b91059264e1513ecd9f91990f6d30280fb7e7d9453d2293f88a2f8ba62a1bdd",
+  "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+  "timestamp": 1787815309
+}

@@ -1,13 +1,11 @@
-Copyright (c) Jason Liao / NateMind
+Copyright © 2026 NateMind Ltd. (森言有限公司). All rights reserved, except where otherwise expressly stated.
 
-All rights reserved.
+This Public Proof release is provided for public inspection, academic reference, technical evaluation, interoperability discussion, and citation subject to applicable law and any artifact-specific terms.
 
-This public proof edition is provided for review, evaluation, and architectural reference only.
+Public availability does not transfer ownership and does not by itself grant unrestricted rights to reproduce, adapt, translate, redistribute, commercialize, sublicense, integrate, deploy, or create derivative implementations of LPP, Mind Universe, the LPP Admission Kernel, or related proprietary architecture.
 
-No part of this repository may be reproduced, modified, distributed, sublicensed, deployed in production, commercially integrated, or used to create derivative implementations without prior written authorization from the copyright holder.
+Individual papers, code, datasets, schemas, examples, or other artifacts may carry separate terms. Where an artifact-specific license or notice exists, that artifact-specific term governs that artifact.
 
-The architectural concepts, governance logic, admission control structures, artifact verification model, protocol framing, and related materials contained in this repository are proprietary intellectual property of Jason Liao / NateMind.
+No public disclosure in this repository should be interpreted as disclosure or licensing of private keys, credentials, private implementation details, production security controls, customer configurations, or non-public P2/P3 material.
 
-Permission is not granted for open-source redistribution, commercial use, or protocol replication.
-
-For licensing, research collaboration, or authorized integration inquiries, formal written permission is required.
+For research collaboration, licensing, authorized integration, or commercial use, written authorization may be required.

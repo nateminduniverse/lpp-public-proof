@@ -1,0 +1,50 @@
+{
+  "first_execute": {
+    "artifact_id": "aa:a9ca3eb6-83c7-4970-abb7-821f1ae8857a",
+    "decision": "ADMIT",
+    "result": {
+      "amount": 100,
+      "currency": "USD",
+      "function": "transfer_funds",
+      "status": "success",
+      "transaction_id": "txn-mock-001"
+    }
+  },
+  "propose": {
+    "artifact": {
+      "artifact_id": "aa:2a7c9375-7d54-449b-979a-acf24318aa28",
+      "authority_id": "auth:alice:001",
+      "authority_state_hash": "9f4d9ad8ad9bb9848ea069ce2efbe1fff5f601ea72134b8283477c72397e79a4",
+      "cp_signature": "Zu4nn26p0fB27axAHbdT5odr4zxWBfBh8goXlf9fgqrtICLJGz2yYZsy4f3lXoMolGVqXMN7Ev25JK4B6NPfCw",
+      "decision": "ADMIT",
+      "intent_hash": "3b5ac587741f85d05265be6eeabfc080f76299276947716627773e97967d81ba",
+      "nonce": "5f7ca77e0bd5503677b8cd3cbeedafd4941ba9bde2c182b41ff9caee96e3f61a",
+      "permit_id": "60ba7bf5-84b3-4075-9fd7-b91cfeb2d9dd",
+      "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+      "prev_artifact_hash": "aeebad4a796fcc2e15dc4c6061b45ed9b373f26adfc798ca7d2d8cc58182718e",
+      "principal_id": "principal:alice",
+      "reason_code": "OK",
+      "result_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+      "timestamp": 1787815309
+    },
+    "decision": "ADMIT",
+    "permit": {
+      "authority_id": "auth:alice:001",
+      "cp_signature": "HNWV-thYfapAcXscY8E9jcA3Y2Bx1bXIjo1qLp-BTHn0pUqb6ab_gpkHoZauySOkQbI_t7x1460RykmgaJ24Bw",
+      "expires_at": 1787815369,
+      "intent_hash": "3b5ac587741f85d05265be6eeabfc080f76299276947716627773e97967d81ba",
+      "issued_at": 1787815309,
+      "nonce": "5f7ca77e0bd5503677b8cd3cbeedafd4941ba9bde2c182b41ff9caee96e3f61a",
+      "permit_id": "60ba7bf5-84b3-4075-9fd7-b91cfeb2d9dd",
+      "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+      "principal_id": "principal:alice",
+      "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba"
+    }
+  },
+  "second_execute": {
+    "artifact_id": "aa:04af1323-5134-4834-9595-79a848b709e0",
+    "decision": "DENY",
+    "reason_code": "REPLAY"
+  }
+}

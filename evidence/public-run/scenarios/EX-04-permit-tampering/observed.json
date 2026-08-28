@@ -1,0 +1,39 @@
+{
+  "execute": {
+    "artifact_id": "aa:54af86df-cc64-45e4-80e8-29a17d73faf2",
+    "decision": "DENY",
+    "reason_code": "SIG_FAIL"
+  },
+  "propose": {
+    "artifact": {
+      "artifact_id": "aa:e685cc44-496a-4f94-a0d1-7a11e6f255ca",
+      "authority_id": "auth:alice:001",
+      "authority_state_hash": "9f4d9ad8ad9bb9848ea069ce2efbe1fff5f601ea72134b8283477c72397e79a4",
+      "cp_signature": "-EL7jVXC_A0A3fGi5EW5YiH6xKTxejZtXy_ulHc46vheKoEYZi4X6ZUSUIShOU0DmzRIDNEpgfCYe0RrduEcBw",
+      "decision": "ADMIT",
+      "intent_hash": "9286add317562419a89a3d07601b90db088a8c96f5b846914f953c9092483b80",
+      "nonce": "d14f6aa16f30ceba7a74ef11ae22dfcc8603a829239942a6d909e9a5ee3a914b",
+      "permit_id": "1b96cc96-6241-44f7-a3be-99971cab041b",
+      "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+      "prev_artifact_hash": "aeebad4a796fcc2e15dc4c6061b45ed9b373f26adfc798ca7d2d8cc58182718e",
+      "principal_id": "principal:alice",
+      "reason_code": "OK",
+      "result_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+      "timestamp": 1787815309
+    },
+    "decision": "ADMIT",
+    "permit": {
+      "authority_id": "auth:alice:001",
+      "cp_signature": "XntCLpGDeUbWDGMlcJyloZjvgsajssQrGPIsqLN-TCHB2zyr0CKPrzs4LCpLiq4xb5bFG2dU7ih-u_w7-yvvDQ",
+      "expires_at": 1787815369,
+      "intent_hash": "9286add317562419a89a3d07601b90db088a8c96f5b846914f953c9092483b80",
+      "issued_at": 1787815309,
+      "nonce": "d14f6aa16f30ceba7a74ef11ae22dfcc8603a829239942a6d909e9a5ee3a914b",
+      "permit_id": "1b96cc96-6241-44f7-a3be-99971cab041b",
+      "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+      "principal_id": "principal:alice",
+      "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba"
+    }
+  }
+}

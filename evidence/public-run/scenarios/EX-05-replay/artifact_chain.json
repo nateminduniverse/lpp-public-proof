@@ -1,0 +1,155 @@
+{
+  "chain": [
+    {
+      "artifact": {
+        "artifact_id": "aa:2a7c9375-7d54-449b-979a-acf24318aa28",
+        "authority_id": "auth:alice:001",
+        "authority_state_hash": "9f4d9ad8ad9bb9848ea069ce2efbe1fff5f601ea72134b8283477c72397e79a4",
+        "cp_signature": "Zu4nn26p0fB27axAHbdT5odr4zxWBfBh8goXlf9fgqrtICLJGz2yYZsy4f3lXoMolGVqXMN7Ev25JK4B6NPfCw",
+        "decision": "ADMIT",
+        "intent_hash": "3b5ac587741f85d05265be6eeabfc080f76299276947716627773e97967d81ba",
+        "nonce": "5f7ca77e0bd5503677b8cd3cbeedafd4941ba9bde2c182b41ff9caee96e3f61a",
+        "permit_id": "60ba7bf5-84b3-4075-9fd7-b91cfeb2d9dd",
+        "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+        "prev_artifact_hash": "aeebad4a796fcc2e15dc4c6061b45ed9b373f26adfc798ca7d2d8cc58182718e",
+        "principal_id": "principal:alice",
+        "reason_code": "OK",
+        "result_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+        "timestamp": 1787815309
+      },
+      "snapshots": {
+        "ar": {
+          "authority_id": "auth:alice:001",
+          "expiry": 9999999999,
+          "principal_id": "principal:alice",
+          "revoked_at": null,
+          "scope_id": "scope:001",
+          "state": "ACTIVE"
+        },
+        "policy": {
+          "current_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+          "description": "MVP baseline policy",
+          "version": "v1.0"
+        },
+        "result": null,
+        "se": {
+          "allowed_functions": [
+            "transfer_funds",
+            "create_ticket"
+          ],
+          "param_rules_hash": "placeholder",
+          "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+          "scope_id": "scope:001",
+          "target_patterns": [
+            "bank:acct:*",
+            "jira:*"
+          ]
+        }
+      }
+    },
+    {
+      "artifact": {
+        "artifact_id": "aa:a9ca3eb6-83c7-4970-abb7-821f1ae8857a",
+        "authority_id": "auth:alice:001",
+        "authority_state_hash": "9f4d9ad8ad9bb9848ea069ce2efbe1fff5f601ea72134b8283477c72397e79a4",
+        "cp_signature": "T96kzzDhwVxn6Yxx_V9iqQCrHkuNOwF43Fw1_GSVaSO3-XEqFbG-T3v6uYJVvSqVrH_eJqmuHiI10LyP1sZDDA",
+        "decision": "ADMIT",
+        "intent_hash": "3b5ac587741f85d05265be6eeabfc080f76299276947716627773e97967d81ba",
+        "nonce": "5f7ca77e0bd5503677b8cd3cbeedafd4941ba9bde2c182b41ff9caee96e3f61a",
+        "permit_id": "60ba7bf5-84b3-4075-9fd7-b91cfeb2d9dd",
+        "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+        "prev_artifact_hash": "cdebb505b811c9ec139c9c4c400ef6437f0b1241753ab8af1eb83eae660868c0",
+        "principal_id": "principal:alice",
+        "reason_code": "OK",
+        "result_hash": "ee99378a27b479158584666b1658b32095a969dc65dd513212f288b20d35f288",
+        "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+        "timestamp": 1787815309
+      },
+      "snapshots": {
+        "ar": {
+          "authority_id": "auth:alice:001",
+          "expiry": 9999999999,
+          "principal_id": "principal:alice",
+          "revoked_at": null,
+          "scope_id": "scope:001",
+          "state": "ACTIVE"
+        },
+        "policy": {
+          "current_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+          "description": "MVP baseline policy",
+          "version": "v1.0"
+        },
+        "result": {
+          "amount": 100,
+          "currency": "USD",
+          "function": "transfer_funds",
+          "status": "success",
+          "transaction_id": "txn-mock-001"
+        },
+        "se": {
+          "allowed_functions": [
+            "transfer_funds",
+            "create_ticket"
+          ],
+          "param_rules_hash": "placeholder",
+          "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+          "scope_id": "scope:001",
+          "target_patterns": [
+            "bank:acct:*",
+            "jira:*"
+          ]
+        }
+      }
+    },
+    {
+      "artifact": {
+        "artifact_id": "aa:04af1323-5134-4834-9595-79a848b709e0",
+        "authority_id": "auth:alice:001",
+        "authority_state_hash": "9f4d9ad8ad9bb9848ea069ce2efbe1fff5f601ea72134b8283477c72397e79a4",
+        "cp_signature": "4v-RCnDqGjfckRiTtmCKhGzjx0Wjlj2FYldqLMqswQSglTpLTL306EhAjYxErQMHUXNbHIxINkKMOGry205UBA",
+        "decision": "DENY",
+        "intent_hash": "3b5ac587741f85d05265be6eeabfc080f76299276947716627773e97967d81ba",
+        "nonce": "5f7ca77e0bd5503677b8cd3cbeedafd4941ba9bde2c182b41ff9caee96e3f61a",
+        "permit_id": "60ba7bf5-84b3-4075-9fd7-b91cfeb2d9dd",
+        "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+        "prev_artifact_hash": "9e37a6d971427a75d315b2aa44608e0de72c8b8bed4895c5a18a01e24eaa8802",
+        "principal_id": "principal:alice",
+        "reason_code": "REPLAY",
+        "result_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+        "timestamp": 1787815309
+      },
+      "snapshots": {
+        "ar": {
+          "authority_id": "auth:alice:001",
+          "expiry": 9999999999,
+          "principal_id": "principal:alice",
+          "revoked_at": null,
+          "scope_id": "scope:001",
+          "state": "ACTIVE"
+        },
+        "policy": {
+          "current_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+          "description": "MVP baseline policy",
+          "version": "v1.0"
+        },
+        "result": null,
+        "se": {
+          "allowed_functions": [
+            "transfer_funds",
+            "create_ticket"
+          ],
+          "param_rules_hash": "placeholder",
+          "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+          "scope_id": "scope:001",
+          "target_patterns": [
+            "bank:acct:*",
+            "jira:*"
+          ]
+        }
+      }
+    }
+  ],
+  "length": 3
+}

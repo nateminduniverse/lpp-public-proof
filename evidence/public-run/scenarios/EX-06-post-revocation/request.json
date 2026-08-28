@@ -1,0 +1,23 @@
+{
+  "execution_intent": {
+    "function": "transfer_funds",
+    "intent_hash": "d81c474ebdeb794047ea4180d50dc518bf8c0675c7e284362758ff9470cd9e32",
+    "intent_id": "b079b379-c927-4b14-9518-5d69d529cbc6",
+    "params_c14n": "{\"amount\":100,\"currency\":\"USD\"}",
+    "principal_id": "principal:alice",
+    "target": "bank:acct:XYZ",
+    "timestamp": 1787815309
+  },
+  "permit": {
+    "authority_id": "auth:alice:001",
+    "cp_signature": "8M0kFaeC-YeCqUEp17t1ehEBV1xyQoPTnBA7xcksHd-Ec576X-W5vhk0l7WurQtiD2hqhcHmxvSBgCr_KWDHAw",
+    "expires_at": 1787815369,
+    "intent_hash": "d81c474ebdeb794047ea4180d50dc518bf8c0675c7e284362758ff9470cd9e32",
+    "issued_at": 1787815309,
+    "nonce": "cc1078aaac0d8b6664e7ba9b31ffb94a959f197ed2b370c19c6beef07877c40c",
+    "permit_id": "6a06f7b0-b9eb-41a7-a87c-03a394594534",
+    "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+    "principal_id": "principal:alice",
+    "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba"
+  }
+}

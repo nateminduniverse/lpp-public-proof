@@ -1,0 +1,35 @@
+{
+  "execution_intent": {
+    "function": "transfer_funds",
+    "intent_hash": "9286add317562419a89a3d07601b90db088a8c96f5b846914f953c9092483b80",
+    "intent_id": "a6d24439-ed40-4285-8a2a-73a2cadedda1",
+    "params_c14n": "{\"amount\":100,\"currency\":\"USD\"}",
+    "principal_id": "principal:alice",
+    "target": "bank:acct:XYZ",
+    "timestamp": 1787815309
+  },
+  "original_permit": {
+    "authority_id": "auth:alice:001",
+    "cp_signature": "XntCLpGDeUbWDGMlcJyloZjvgsajssQrGPIsqLN-TCHB2zyr0CKPrzs4LCpLiq4xb5bFG2dU7ih-u_w7-yvvDQ",
+    "expires_at": 1787815369,
+    "intent_hash": "9286add317562419a89a3d07601b90db088a8c96f5b846914f953c9092483b80",
+    "issued_at": 1787815309,
+    "nonce": "d14f6aa16f30ceba7a74ef11ae22dfcc8603a829239942a6d909e9a5ee3a914b",
+    "permit_id": "1b96cc96-6241-44f7-a3be-99971cab041b",
+    "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+    "principal_id": "principal:alice",
+    "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba"
+  },
+  "tampered_permit": {
+    "authority_id": "auth:alice:001",
+    "cp_signature": "XntCLpGDeUbWDGMlcJyloZjvgsajssQrGPIsqLN-TCHB2zyr0CKPrzs4LCpLiq4xb5bFG2dU7ih-u_w7-yvvDQ",
+    "expires_at": 1787815369,
+    "intent_hash": "9286add317562419a89a3d07601b90db088a8c96f5b846914f953c9092483b80",
+    "issued_at": 1787815309,
+    "nonce": "0000000000000000000000000000000000000000000000000000000000000000",
+    "permit_id": "1b96cc96-6241-44f7-a3be-99971cab041b",
+    "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+    "principal_id": "principal:alice",
+    "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba"
+  }
+}

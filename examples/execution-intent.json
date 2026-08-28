@@ -1,0 +1,9 @@
+{
+  "function": "transfer_funds",
+  "intent_hash": "2368893f6d09c167119139defb10dedd108730a1588e26ecda18bfe57604e542",
+  "intent_id": "533207f1-97c1-4435-9218-d4e125bca076",
+  "params_c14n": "{\"amount\":500,\"currency\":\"USD\"}",
+  "principal_id": "principal:alice",
+  "target": "bank:acct:XYZ",
+  "timestamp": 1787815309
+}

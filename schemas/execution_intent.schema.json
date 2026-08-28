@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lpp.example/schemas/execution_intent",
+  "title": "ExecutionIntent",
+  "description": "Describes a proposed execution action. intent_hash binds all fields and is verified by the gate.",
+  "type": "object",
+  "required": ["intent_id","principal_id","function","target","params_c14n","intent_hash","timestamp"],
+  "additionalProperties": false,
+  "properties": {
+    "intent_id":    { "type": "string", "format": "uuid" },
+    "principal_id": { "type": "string", "examples": ["principal:alice"] },
+    "function":     { "type": "string", "examples": ["transfer_funds","create_ticket"] },
+    "target":       { "type": "string", "examples": ["bank:acct:XYZ","jira:PROJECT"] },
+    "params_c14n":  { "type": "string", "description": "JCS-canonicalised JSON string of function parameters" },
+    "intent_hash":  { "type": "string", "description": "sha256(canonical(EI without intent_hash))", "pattern": "^[0-9a-f]{64}$" },
+    "timestamp":    { "type": "integer", "description": "Unix epoch seconds" }
+  }
+}

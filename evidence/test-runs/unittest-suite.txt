@@ -1,0 +1,32 @@
+test_execute_admit_create_ticket (test_01_happy_path.TestHappyPath.test_execute_admit_create_ticket) ... ok
+test_execute_admit_transfer_funds (test_01_happy_path.TestHappyPath.test_execute_admit_transfer_funds) ... ok
+test_propose_returns_admit (test_01_happy_path.TestHappyPath.test_propose_returns_admit) ... ok
+test_no_permit_deny (test_02_no_permit.TestNoPermit.test_no_permit_deny) ... ok
+test_permit_field_absent (test_02_no_permit.TestNoPermit.test_permit_field_absent) ... ok
+test_mismatched_ei_at_ep_denied (test_03_scope_fail.TestScopeFail.test_mismatched_ei_at_ep_denied)
+Permit for transfer_funds reused with a different EI → INTENT_MISMATCH. ... ok
+test_wrong_function_denied_at_propose (test_03_scope_fail.TestScopeFail.test_wrong_function_denied_at_propose) ... ok
+test_wrong_target_denied_at_propose (test_03_scope_fail.TestScopeFail.test_wrong_target_denied_at_propose) ... ok
+test_tampered_expires_at (test_04_tampered_permit.TestTamperedPermit.test_tampered_expires_at) ... ok
+test_tampered_nonce (test_04_tampered_permit.TestTamperedPermit.test_tampered_nonce) ... ok
+test_tampered_principal_id (test_04_tampered_permit.TestTamperedPermit.test_tampered_principal_id) ... ok
+test_tampered_scope_hash (test_04_tampered_permit.TestTamperedPermit.test_tampered_scope_hash) ... ok
+test_replay_produces_artifact (test_05_replay.TestReplay.test_replay_produces_artifact) ... ok
+test_second_submission_denied (test_05_replay.TestReplay.test_second_submission_denied) ... ok
+test_authority_state_shows_revoked (test_06_revoke_then_run.TestRevokeThenRun.test_authority_state_shows_revoked) ... ok
+test_revoke_deny_artifact_stored (test_06_revoke_then_run.TestRevokeThenRun.test_revoke_deny_artifact_stored) ... ok
+test_revoke_nonexistent_returns_404 (test_06_revoke_then_run.TestRevokeThenRun.test_revoke_nonexistent_returns_404) ... ok
+test_revoke_then_execute_denied (test_06_revoke_then_run.TestRevokeThenRun.test_revoke_then_execute_denied) ... ok
+test_chain_linkage_broken (test_07_artifact_verification.TestArtifactVerification.test_chain_linkage_broken) ... ok
+test_chain_linkage_two_artifacts (test_07_artifact_verification.TestArtifactVerification.test_chain_linkage_two_artifacts) ... ok
+test_first_artifact_genesis_hash (test_07_artifact_verification.TestArtifactVerification.test_first_artifact_genesis_hash) ... ok
+test_mutated_decision_invalid (test_07_artifact_verification.TestArtifactVerification.test_mutated_decision_invalid) ... ok
+test_tampered_ar_snapshot_invalid (test_07_artifact_verification.TestArtifactVerification.test_tampered_ar_snapshot_invalid) ... ok
+test_tampered_policy_snapshot_invalid (test_07_artifact_verification.TestArtifactVerification.test_tampered_policy_snapshot_invalid) ... ok
+test_valid_admit_artifact (test_07_artifact_verification.TestArtifactVerification.test_valid_admit_artifact) ... ok
+test_zeroed_signature_invalid (test_07_artifact_verification.TestArtifactVerification.test_zeroed_signature_invalid) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.030s
+
+OK

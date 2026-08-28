@@ -1,0 +1,11 @@
+{
+  "execution_intent": {
+    "function": "delete_record",
+    "intent_hash": "09fe691718b932a487f8c1690b71cdb7a46317e940b1b7dc1e000d4fe24d9709",
+    "intent_id": "278cca7b-ef8f-4880-9694-87028e998f3b",
+    "params_c14n": "{}",
+    "principal_id": "principal:alice",
+    "target": "bank:acct:XYZ",
+    "timestamp": 1787815309
+  }
+}

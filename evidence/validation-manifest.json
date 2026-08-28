@@ -1,0 +1,116 @@
+{
+  "artifact_verifier_endpoint": {
+    "direct_checks": [
+      "cp_signature",
+      "policy_hash",
+      "authority_state_hash",
+      "scope_hash",
+      "result_hash",
+      "chain_linkage"
+    ]
+  },
+  "decision_paths": {
+    "ADMIT": {
+      "implemented": true,
+      "specified": true,
+      "validated_in_current_mvp_scope": true
+    },
+    "COLLAPSE": {
+      "implemented": false,
+      "specified": true,
+      "validated_in_current_mvp_scope": false
+    },
+    "DEFER": {
+      "implemented": false,
+      "specified": true,
+      "validated_in_current_mvp_scope": false
+    },
+    "DENY": {
+      "implemented": true,
+      "specified": true,
+      "validated_in_current_mvp_scope": true
+    }
+  },
+  "independent_external_reproduction": false,
+  "private_key_in_public_release": false,
+  "production_validation": false,
+  "public_evidence_verifier": {
+    "checks": 113,
+    "passed": 113
+  },
+  "release": "Public Proof v2.0 \u2014 Controlled Technical Evidence Release",
+  "release_date": "2026-08-27",
+  "six_core_execution_scenarios": [
+    {
+      "artifact_count_in_isolated_run": 2,
+      "expected_decision": "ADMIT",
+      "expected_reason_code": "OK",
+      "id": "EX-01",
+      "observed_decision": "ADMIT",
+      "observed_reason_code": "OK",
+      "scenario": "Valid execution",
+      "status": "PASS"
+    },
+    {
+      "artifact_count_in_isolated_run": 1,
+      "expected_decision": "DENY",
+      "expected_reason_code": "NO_PERMIT",
+      "id": "EX-02",
+      "observed_decision": "DENY",
+      "observed_reason_code": "NO_PERMIT",
+      "scenario": "No Permit",
+      "status": "PASS"
+    },
+    {
+      "artifact_count_in_isolated_run": 1,
+      "expected_decision": "DENY",
+      "expected_reason_code": "SCOPE_FAIL",
+      "id": "EX-03",
+      "observed_decision": "DENY",
+      "observed_reason_code": "SCOPE_FAIL",
+      "scenario": "Scope violation",
+      "status": "PASS"
+    },
+    {
+      "artifact_count_in_isolated_run": 2,
+      "expected_decision": "DENY",
+      "expected_reason_code": "SIG_FAIL",
+      "id": "EX-04",
+      "observed_decision": "DENY",
+      "observed_reason_code": "SIG_FAIL",
+      "scenario": "Permit tampering",
+      "status": "PASS"
+    },
+    {
+      "artifact_count_in_isolated_run": 3,
+      "expected_decision": "DENY",
+      "expected_reason_code": "REPLAY",
+      "id": "EX-05",
+      "observed_decision": "DENY",
+      "observed_reason_code": "REPLAY",
+      "scenario": "Replay",
+      "status": "PASS"
+    },
+    {
+      "artifact_count_in_isolated_run": 2,
+      "expected_decision": "DENY",
+      "expected_reason_code": "REVOKED",
+      "id": "EX-06",
+      "observed_decision": "DENY",
+      "observed_reason_code": "REVOKED",
+      "scenario": "Post-revocation execution",
+      "status": "PASS"
+    }
+  ],
+  "source_archive": "admission-kernel-mvp-final.tar(1).gz",
+  "source_archive_sha256": "84f901d8d170b5f4110149ce287ab1d722749581ac922151c92a578488bce2d5",
+  "source_test_inventory": {
+    "compatibility_run_passed": 26,
+    "environment": "offline release-builder compatibility test client",
+    "test_methods": 26
+  },
+  "standalone_core_verification": {
+    "checks": 49,
+    "passed": 49
+  }
+}

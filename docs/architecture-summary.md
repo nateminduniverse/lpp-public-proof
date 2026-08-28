@@ -1,51 +1,48 @@
 # Architecture Summary
 
-## Core model
+## Two-plane MVP
 
-The public MVP architecture is defined by three structural ideas:
+The current Admission Kernel MVP separates two trust roles.
 
-1. **Authority is evaluated upstream**
-2. **Execution is gated before action**
-3. **Every decision leaves reconstructable evidence**
+### Control Plane (CP)
 
-## Plane separation
+The final MVP source contains:
+- Authority Registry
+- Scope Registry
+- Policy Registry
+- Permit Issuer
+- Artifact Signer
+- Revocation Store
+- append-only Admission Artifact chain
 
-### Control Plane
-The control side is responsible for:
-- authority state
-- scope definition
-- policy reference
-- permission issuance
-- artifact signing
-- revocation state
+### Execution Plane (EP)
 
-### Execution Plane
-The execution side is responsible for:
-- accepting execution intents
-- enforcing a mandatory gate
-- checking whether execution may proceed
-- producing the execution-side outcome that can be bound to an admission artifact
+The final MVP source contains:
+- Execution Intent construction
+- Permit verification gate
+- replay guard
+- executor
+- CP client boundary
 
-## Chokepoint principle
+## Gate order in the final MVP
 
-No execution path should bypass the verification gate.
+The current `VerifyPermit` path evaluates:
 
-This is the central engineering proof point of the MVP.
+1. Permit present
+2. CP signature valid
+3. Permit not expired
+4. intent-hash binding
+5. authority revocation
+6. authority expiry
+7. authority active state
+8. scope-hash currency
+9. function in scope
+10. target-pattern match
+11. policy-hash match
+12. nonce replay
 
-## Publicly disclosed invariant level
+A failed check returns DENY with the corresponding implementation reason code.
 
-The public edition discloses the following invariant-level claims only:
+## Boundary
 
-- no execution without a valid permit-equivalent authority result
-- no silent bypass around the execution gate
-- revocation must be enforceable
-- both ADMIT and DENY should be representable as structured artifacts
-
-## Deliberately withheld detail
-
-This public edition does not disclose:
-- full API contracts
-- full object schemas
-- full verification internals
-- exact implementation-specific storage conventions
-- internal engineering patches and handoff details
+The MVP implements ADMIT and DENY only. DEFER and COLLAPSE remain protocol-level decisions outside the current executable decision set.

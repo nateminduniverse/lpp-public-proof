@@ -1,0 +1,26 @@
+{
+  "scope:001": {
+    "allowed_functions": [
+      "transfer_funds",
+      "create_ticket"
+    ],
+    "param_rules_hash": "placeholder",
+    "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+    "scope_id": "scope:001",
+    "target_patterns": [
+      "bank:acct:*",
+      "jira:*"
+    ]
+  },
+  "scope:002": {
+    "allowed_functions": [
+      "create_ticket"
+    ],
+    "param_rules_hash": "placeholder",
+    "scope_hash": "163e1b86ac0346e807649ca52987845238b60bbb5b9e52d0086653ab5fcc47a7",
+    "scope_id": "scope:002",
+    "target_patterns": [
+      "jira:*"
+    ]
+  }
+}

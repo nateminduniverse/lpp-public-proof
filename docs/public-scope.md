@@ -1,30 +1,31 @@
 # Public Scope
 
-## Included in the public proof edition
+## Included in Public Proof v2.0
 
-The public edition is intended to show:
+- exact current-MVP JSON Schemas
+- current implementation reason-code map
+- six core execution scenarios
+- captured isolated-run outputs
+- selected signed Permit and Admission Artifact examples
+- synthetic authority, scope, policy, replay and artifact-chain snapshots
+- public CP key generated specifically for this evidence run
+- raw release-builder validation outputs
+- public evidence-verification utility
+- machine-readable validation manifest
 
-- project positioning
-- architecture direction
-- MVP boundaries
-- control plane / execution plane separation
-- high-level proof of pre-execution governance
-- intellectual property and usage restrictions
+## Excluded
 
-## Excluded from the public proof edition
+- full runnable Admission Kernel source
+- source test harness
+- private signing keys
+- production key-management procedures
+- production IAM / policy-engine integration
+- production deployment configuration
+- proprietary implementation details outside the disclosed evidence boundary
+- complete protocol internals beyond the current public specifications
 
-The following categories are intentionally excluded or reduced:
+## Purpose of the boundary
 
-- copy-ready engineering details
-- complete runnable deployment detail
-- internal implementation shortcuts
-- operational key handling detail
-- detailed seed/runtime artifact handling
-- full test harness disclosure
-- full handoff and internal development history
+Public Proof v2.0 is designed to support meaningful technical inspection without becoming a copy-ready engineering handoff.
 
-## Why this boundary exists
-
-The purpose of the public edition is to prove authorship and structural direction.
-
-The purpose is **not** to minimize replication cost for third parties.
+Public availability permits inspection and evaluation subject to repository terms. It does not by itself grant implementation, redistribution, derivative, sublicensing, or commercial-deployment rights.

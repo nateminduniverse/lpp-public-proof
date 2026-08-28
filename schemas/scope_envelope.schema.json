@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lpp.example/schemas/scope_envelope",
+  "title": "ScopeEnvelope",
+  "type": "object",
+  "required": ["scope_id","allowed_functions","target_patterns","param_rules_hash","scope_hash"],
+  "additionalProperties": false,
+  "properties": {
+    "scope_id":          { "type": "string" },
+    "allowed_functions": { "type": "array", "items": { "type": "string" } },
+    "target_patterns":   { "type": "array", "items": { "type": "string" }, "description": "fnmatch-style globs" },
+    "param_rules_hash":  { "type": "string", "description": "sha256 of param constraint rule-set (placeholder in MVP)" },
+    "scope_hash":        { "type": "string", "description": "sha256(canonical(SE without scope_hash))", "pattern": "^[0-9a-f]{64}$" }
+  }
+}

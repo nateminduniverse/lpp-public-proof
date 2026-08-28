@@ -1,97 +1,126 @@
-# LPP Admission Kernel MVP — Public Proof Edition
+# LPP Admission Kernel MVP — Public Proof v2.0
 
-Pre-execution authority gate prototype for AI-triggered execution systems under the Lingua Pactum Protocol (LPP) framing.
+## Controlled Technical Evidence Release
 
-This repository edition is a **public proof release**. Its purpose is to establish architectural evidence, project direction, and timestamped authorship for the LPP Admission Kernel MVP.
+**Release date:** 2026-08-27
 
-It is **not** a full engineering handoff, **not** an open-source production package, and **not** a complete deployment release.
+Public Proof v2.0 upgrades the repository from architecture/provenance-only disclosure to a **bounded technical inspection layer** for the current LPP Admission Kernel MVP.
 
-## Why this public edition exists
+The release is based on the final supplied MVP archive:
 
-This public edition is intended to prove four things:
+`admission-kernel-mvp-final.tar(1).gz`
 
-1. the core architecture was already defined and implemented as an MVP prototype
-2. the project is centered on pre-execution governance rather than post-hoc logging
-3. the architecture distinguishes **authority validation**, **execution gating**, and **artifact-based reconstructability**
-4. the public release is for proof, evaluation, and controlled review — not for unrestricted reuse
+SHA-256:
 
-## Core MVP claim
+`84f901d8d170b5f4110149ce287ab1d722749581ac922151c92a578488bce2d5`
 
-The LPP Admission Kernel MVP focuses on three structural functions:
+This repository is intentionally **not**:
+- a full engineering handoff
+- an open-source production runtime
+- a complete protocol implementation
+- a production security certification
+- an independent external reproduction
 
-- **Permit Mint**  
-  A control-side authority process issues a signed permission object only when authority, scope, and policy conditions are satisfied.
+## What is public in v2.0
 
-- **Non-bypassable Gate**  
-  Execution must pass through a mandatory verification chokepoint before any action is allowed to proceed.
+- exact JSON Schemas from the final MVP package
+- current implementation reason codes and gate-check order
+- the six core execution scenarios
+- captured observed outputs from isolated scenario runs
+- signed synthetic MVP evidence generated with a fresh evidence-run CP key
+- public CP key for verification; no private key is included
+- a standalone public evidence verifier
+- raw output from the final package's standalone `verify_core.py`
+- raw output from the 26-test application suite run under the release-builder compatibility environment
+- a machine-readable validation manifest
 
-- **Admission Artifact**  
-  Every ADMIT or DENY decision produces a structured, signed record suitable for later reconstruction and verification.
+## Evidence discipline
 
-## Public architecture summary
+> **Specified ≠ Implemented ≠ Validated ≠ Independently Reproduced**
 
-The architecture is divided into two conceptual planes:
+| Decision | Protocol specified | Current MVP implemented | Current MVP validated in disclosed paths |
+|---|---:|---:|---:|
+| ADMIT | Yes | Yes | Yes |
+| DENY | Yes | Yes | Yes |
+| DEFER | Yes | No | No |
+| COLLAPSE | Yes | No | No |
 
-### Control Plane
-Responsible for:
-- authority state
-- scope registry
-- policy reference
-- permit issuance
-- artifact signing
-- revocation tracking
+## Current MVP evidence results
 
-### Execution Plane
-Responsible for:
-- receiving execution intents
-- enforcing the verification gate
-- replay protection
-- invoking permitted actions only after admission succeeds
+- Application test inventory in final source package: **26 tests**
+- Release-builder compatibility run: **26/26 PASS**
+- Standalone core verifier: **49/49 PASS**
+- Six disclosed execution scenarios: **6/6 observed as expected**
 
-## What this edition deliberately omits
+See `docs/validation-status.md` and `evidence/test-runs/` for the exact boundary and raw outputs.
 
-To avoid turning this repository into a copy-ready implementation package, this public edition does **not** include full operational detail for:
+## Six core execution scenarios
 
-- private key material
-- full runnable deployment instructions
-- complete engineering handoff chain
-- full artifact reconstruction internals
-- internal seed / operational data handling
-- implementation-specific coupling details that materially reduce replication effort
-- extended roadmap items outside the public proof scope
+| ID | Scenario | Observed result |
+|---|---|---|
+| EX-01 | Valid execution | `ADMIT / OK` |
+| EX-02 | No Permit | `DENY / NO_PERMIT` |
+| EX-03 | Scope violation | `DENY / SCOPE_FAIL` |
+| EX-04 | Permit tampering | `DENY / SIG_FAIL` |
+| EX-05 | Replay | first execution `ADMIT / OK`; replay `DENY / REPLAY` |
+| EX-06 | Post-revocation execution | `DENY / REVOKED` |
 
-## Positioning
+In the final MVP package, **each disclosed ADMIT or DENY decision path above produces a signed Admission Artifact**. Some scenarios contain more than one artifact because the Control Plane admission decision and the later Execution Plane decision are separately recorded.
 
-This public proof edition should be understood as:
+## Artifact verification boundary
 
-- proof of architectural authorship
-- proof of MVP direction
-- proof of pre-execution governance framing
-- proof that the work had already moved beyond concept-only whitepaper language
+The final MVP endpoint implements six mechanical reconstruction checks:
 
-It should **not** be interpreted as:
+1. CP signature
+2. policy hash
+3. authority-state hash
+4. scope hash
+5. execution-result hash
+6. artifact-chain linkage
 
-- an open-source permission grant
-- a production security claim
-- a compliance certification
-- a full enterprise release
-- a complete protocol disclosure
+The broader protocol-level Artifact Verification Specification contains additional categories, including replay and revocation reasoning. In the current MVP, replay and revocation are exercised through execution-path/state tests rather than as separate checks in the artifact-verifier endpoint.
 
-## Documentation
+**Implementation note:** Source inspection identified a mutable in-memory Authority Record snapshot-aliasing risk after later revocation. Persisted append-only artifact evidence is unaffected and is the canonical captured reconstruction source for this release. See `docs/known-issues.md`.
 
-See:
-- `docs/public-overview.md`
-- `docs/architecture-summary.md`
-- `docs/public-scope.md`
-- `docs/ip-notice.md`
-- `docs/technical-positioning.md`
-- `docs/validation-status.md`
-- `docs/mind-universe-governance-stack.md`
+## Repository map
 
-## Intellectual Property Notice
+- `docs/` — interpretation, architecture, scope, decisions, reason codes, validation status, known issues
+- `schemas/` — exact current MVP JSON Schemas
+- `validation/` — Track A execution scenarios and Track B artifact verification
+- `evidence/` — source hash, raw runs, captured scenario evidence, validation manifest
+- `examples/` — selected real captured objects from the evidence run
+- `tools/verify_evidence.py` — independent verifier for this public evidence set
 
-The architectural concepts, governance logic, admission control framing, artifact verification model, and associated implementation design represented in this repository are proprietary intellectual property of Jason Liao / NateMind.
+## Verify the public evidence
 
-No reproduction, derivative commercial integration, protocol replication, or unauthorized implementation is permitted without prior written authorization.
+```bash
+python -m pip install -r requirements-public-proof.txt
+python tools/verify_evidence.py
+```
 
-For licensing, research collaboration, or authorized integration inquiries, formal contact is required.
+This verification utility validates the disclosed evidence set only. It does not execute the private Admission Kernel source and is not a production conformance suite.
+
+## Public / private boundary
+
+### Public
+- bounded schemas and object examples
+- reason-code semantics
+- six execution-scenario definitions and captured results
+- signed synthetic evidence generated by the final MVP code path
+- public verification key and evidence verifier
+- release-specific manifest and raw validation outputs
+
+### Private
+- full runnable source package
+- private signing keys
+- complete production integration details
+- production IAM / key management / deployment configuration
+- proprietary implementation coupling beyond the disclosed boundary
+
+## Canonical interpretation
+
+Public Proof v2.0 should be read as:
+
+> **Controlled technical evidence for the disclosed current-MVP ADMIT/DENY paths, object contracts, gate behavior, signed evidence, and reconstruction checks.**
+
+It should not be read as proof of universal AI safety, production readiness, broad cross-platform validation, full protocol implementation, or independent external reproduction.
