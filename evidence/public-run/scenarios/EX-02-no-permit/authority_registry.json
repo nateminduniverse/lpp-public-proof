@@ -1,0 +1,18 @@
+{
+  "auth:alice:001": {
+    "authority_id": "auth:alice:001",
+    "expiry": 9999999999,
+    "principal_id": "principal:alice",
+    "revoked_at": null,
+    "scope_id": "scope:001",
+    "state": "ACTIVE"
+  },
+  "auth:bob:001": {
+    "authority_id": "auth:bob:001",
+    "expiry": 9999999999,
+    "principal_id": "principal:bob",
+    "revoked_at": null,
+    "scope_id": "scope:002",
+    "state": "ACTIVE"
+  }
+}

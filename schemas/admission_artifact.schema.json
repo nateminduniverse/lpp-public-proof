@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lpp.example/schemas/admission_artifact",
+  "title": "AdmissionArtifact",
+  "description": "Signed evidence object for every ADMIT or DENY decision. Forms an append-only tamper-evident chain via prev_artifact_hash.",
+  "type": "object",
+  "required": [
+    "artifact_id","decision","reason_code","principal_id","authority_id",
+    "authority_state_hash","scope_hash","intent_hash","policy_hash",
+    "timestamp","result_hash","cp_signature","prev_artifact_hash"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "artifact_id":          { "type": "string" },
+    "decision":             { "type": "string", "enum": ["ADMIT","DENY"] },
+    "reason_code":          { "type": "string", "enum": [
+      "OK","NO_PERMIT","SIG_FAIL","EXPIRED","REVOKED","SCOPE_FAIL",
+      "INTENT_MISMATCH","POLICY_MISMATCH","REPLAY",
+      "AUTHORITY_NOT_ACTIVE","AUTHORITY_EXPIRED","INTERNAL_ERROR"
+    ]},
+    "principal_id":         { "type": "string" },
+    "authority_id":         { "type": "string" },
+    "authority_state_hash": { "type": "string", "description": "sha256(canonical(AuthorityRecord at artifact creation time))", "pattern": "^[0-9a-f]{64}$" },
+    "scope_hash":           { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "intent_hash":          { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "permit_id":            { "type": ["string","null"] },
+    "nonce":                { "type": ["string","null"] },
+    "policy_hash":          { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "timestamp":            { "type": "integer" },
+    "result_hash":          { "type": "string", "description": "sha256(canonical(exec_result)) on ADMIT, sha256('null') on DENY", "pattern": "^[0-9a-f]{64}$" },
+    "cp_signature":         { "type": "string", "description": "Ed25519 over canonical(AA without cp_signature), base64url" },
+    "prev_artifact_hash":   { "type": "string", "description": "sha256(canonical(previous AA including cp_signature)) or sha256(genesis) for first artifact", "pattern": "^[0-9a-f]{64}$" }
+  }
+}

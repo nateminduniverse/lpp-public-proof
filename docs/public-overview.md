@@ -1,34 +1,21 @@
 # Public Overview
 
-## Definition
+LPP Public Proof v2.0 exposes a controlled technical evidence layer for the current Admission Kernel MVP.
 
-LPP Admission Kernel MVP is a pre-execution governance prototype for AI-triggered execution systems.
+The public governance spine is:
 
-Its purpose is not merely to observe what happened after execution.  
-Its purpose is to constrain what is allowed to happen before execution begins.
+**Authority → Intent → Admissibility → Permit → Execution → Evidence**
 
-## Public release objective
+The MVP evidence in this release focuses on the executable subset around:
 
-This public release is designed to show:
-- the existence of the architecture
-- the existence of an MVP direction
-- the existence of a defined governance boundary before execution
-- a timestamped public proof of authorship and implementation direction
+- Execution Intent
+- Authority Record
+- Scope Envelope
+- signed Execution Permit
+- non-bypassable Permit verification logic
+- ADMIT / DENY decision paths
+- revocation and replay enforcement
+- signed Admission Artifact chain
+- bounded artifact reconstruction checks
 
-## What is being claimed publicly
-
-This release publicly claims that the MVP architecture already defined:
-
-- a control-side authority function
-- an execution-side mandatory gate
-- structured admission artifacts
-- revocation-aware governance
-- reconstructable decision evidence
-
-## What is not being claimed publicly
-
-This release does not claim:
-- full public disclosure of the internal implementation
-- unrestricted deployment rights
-- a complete production-ready enterprise package
-- an open-source licensing grant
+The release deliberately keeps the full runnable implementation private while making the disclosed technical claims inspectable.

@@ -1,0 +1,7 @@
+{
+  "execute": {
+    "artifact_id": "aa:5999a447-959a-4d7a-8562-e5c9c2f9cd02",
+    "decision": "DENY",
+    "reason_code": "NO_PERMIT"
+  }
+}

@@ -1,0 +1,20 @@
+LPP Public Proof v2.0 — Controlled Technical Evidence Release
+Built from final MVP archive: admission-kernel-mvp-final.tar(1).gz
+Source SHA-256: 84f901d8d170b5f4110149ce287ab1d722749581ac922151c92a578488bce2d5
+Release date: 2026-08-27
+
+Observed release-builder results
+- Source unittest methods: 26
+- Compatibility test run: 26/26 PASS
+- Standalone core verification: 49/49 PASS
+- Six execution scenarios: 6/6 PASS
+- Public evidence verifier: 113/113 PASS
+- Public private-key material scan: PASS
+
+Important boundary
+- The full runtime source is not included.
+- The source application tests were executed under an offline local Flask-API compatibility shim; see evidence/test-runs/unittest-environment-note.md.
+- The standalone 49-check core verifier ran natively against the final source package.
+- Source inspection identified a mutable in-memory authority-snapshot aliasing risk after later revocation; the static evidence capture does not independently demonstrate the mismatch in every run. Persisted JSONL evidence remains the canonical captured source used by the public verifier.
+- Independent external reproduction and production validation are not claimed.
+- Release files (including manifest): 99

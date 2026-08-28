@@ -1,0 +1,10 @@
+{
+  "evidence_key": "fresh Ed25519 CP key generated in temporary build copy; public key released; private key destroyed/not copied",
+  "release_date": "2026-08-27",
+  "schema_files": 5,
+  "source_archive_sha256": "84f901d8d170b5f4110149ce287ab1d722749581ac922151c92a578488bce2d5",
+  "source_root_file_count": 75,
+  "source_test_methods": 26,
+  "standalone_core_checks": 49,
+  "standalone_core_passed": 49
+}

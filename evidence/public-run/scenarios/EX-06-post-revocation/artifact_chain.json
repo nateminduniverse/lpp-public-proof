@@ -1,0 +1,101 @@
+{
+  "chain": [
+    {
+      "artifact": {
+        "artifact_id": "aa:758dacb6-5adf-4981-ba88-a7524d7ccd3f",
+        "authority_id": "auth:alice:001",
+        "authority_state_hash": "9f4d9ad8ad9bb9848ea069ce2efbe1fff5f601ea72134b8283477c72397e79a4",
+        "cp_signature": "LNz14IVoYMW-d0ng0rngI-P7djJfqyGxN1wGtIB4HFwBUHayZKKqhXuYA5uO9BiRaY-3JY2W1Bb8cLM6qfrOAA",
+        "decision": "ADMIT",
+        "intent_hash": "d81c474ebdeb794047ea4180d50dc518bf8c0675c7e284362758ff9470cd9e32",
+        "nonce": "cc1078aaac0d8b6664e7ba9b31ffb94a959f197ed2b370c19c6beef07877c40c",
+        "permit_id": "6a06f7b0-b9eb-41a7-a87c-03a394594534",
+        "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+        "prev_artifact_hash": "aeebad4a796fcc2e15dc4c6061b45ed9b373f26adfc798ca7d2d8cc58182718e",
+        "principal_id": "principal:alice",
+        "reason_code": "OK",
+        "result_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+        "timestamp": 1787815309
+      },
+      "snapshots": {
+        "ar": {
+          "authority_id": "auth:alice:001",
+          "expiry": 9999999999,
+          "principal_id": "principal:alice",
+          "revoked_at": 1787815309,
+          "scope_id": "scope:001",
+          "state": "REVOKED"
+        },
+        "policy": {
+          "current_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+          "description": "MVP baseline policy",
+          "version": "v1.0"
+        },
+        "result": null,
+        "se": {
+          "allowed_functions": [
+            "transfer_funds",
+            "create_ticket"
+          ],
+          "param_rules_hash": "placeholder",
+          "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+          "scope_id": "scope:001",
+          "target_patterns": [
+            "bank:acct:*",
+            "jira:*"
+          ]
+        }
+      }
+    },
+    {
+      "artifact": {
+        "artifact_id": "aa:107bcb03-69c8-4bf8-aef3-a6a16f67620d",
+        "authority_id": "auth:alice:001",
+        "authority_state_hash": "6d20d062f96cd6538cb9bf59ae36de5c52322923020eae4df6b35acdcfd16954",
+        "cp_signature": "Lw5kS5F3SVGFcZ_plDIR5WzgtVlXinarKI3vYDI8tdEK8rRJ_KIOcun7X6d6nMKA8F3eWL7nBEn6At6FnDkqAg",
+        "decision": "DENY",
+        "intent_hash": "d81c474ebdeb794047ea4180d50dc518bf8c0675c7e284362758ff9470cd9e32",
+        "nonce": "cc1078aaac0d8b6664e7ba9b31ffb94a959f197ed2b370c19c6beef07877c40c",
+        "permit_id": "6a06f7b0-b9eb-41a7-a87c-03a394594534",
+        "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+        "prev_artifact_hash": "c1db9221983bdbb4e43dd9ca37ba6f8e083f83951a981518ce30fcb911bc4ea2",
+        "principal_id": "principal:alice",
+        "reason_code": "REVOKED",
+        "result_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+        "timestamp": 1787815309
+      },
+      "snapshots": {
+        "ar": {
+          "authority_id": "auth:alice:001",
+          "expiry": 9999999999,
+          "principal_id": "principal:alice",
+          "revoked_at": 1787815309,
+          "scope_id": "scope:001",
+          "state": "REVOKED"
+        },
+        "policy": {
+          "current_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+          "description": "MVP baseline policy",
+          "version": "v1.0"
+        },
+        "result": null,
+        "se": {
+          "allowed_functions": [
+            "transfer_funds",
+            "create_ticket"
+          ],
+          "param_rules_hash": "placeholder",
+          "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+          "scope_id": "scope:001",
+          "target_patterns": [
+            "bank:acct:*",
+            "jira:*"
+          ]
+        }
+      }
+    }
+  ],
+  "length": 2
+}

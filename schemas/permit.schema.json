@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lpp.example/schemas/permit",
+  "title": "Permit",
+  "description": "A signed, single-use execution token issued by the Control Plane.",
+  "type": "object",
+  "required": ["permit_id","principal_id","authority_id","scope_hash","policy_hash","intent_hash","nonce","issued_at","expires_at","cp_signature"],
+  "additionalProperties": false,
+  "properties": {
+    "permit_id":    { "type": "string" },
+    "principal_id": { "type": "string" },
+    "authority_id": { "type": "string" },
+    "scope_hash":   { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "policy_hash":  { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "intent_hash":  { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "nonce":        { "type": "string", "description": "32-byte random hex, consumed on ADMIT" },
+    "issued_at":    { "type": "integer" },
+    "expires_at":   { "type": "integer", "description": "issued_at + PERMIT_TTL_SECONDS (default 60)" },
+    "cp_signature": { "type": "string", "description": "Ed25519 over canonical(Permit without cp_signature), base64url" }
+  }
+}

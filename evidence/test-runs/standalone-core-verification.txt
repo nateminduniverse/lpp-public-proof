@@ -1,0 +1,83 @@
+
+[1m[36mV01 — Hash determinism[0m
+  [32m✓ PASS[0m  sha256_json is order-independent
+  [32m✓ PASS[0m  sha256_json is stable across calls
+
+[1m[36mV02 — Ed25519 sign + verify[0m
+  [32m✓ PASS[0m  valid signature verifies
+  [32m✓ PASS[0m  wrong data fails
+  [32m✓ PASS[0m  wrong key fails
+
+[1m[36mV03 — Permit signature covers all fields[0m
+  [32m✓ PASS[0m  original permit sig valid
+  [32m✓ PASS[0m  mutated principal_id → invalid
+  [32m✓ PASS[0m  mutated scope_hash → invalid
+  [32m✓ PASS[0m  mutated expires_at → invalid
+  [32m✓ PASS[0m  mutated nonce → invalid
+
+[1m[36mV04 — intent_hash binding[0m
+  [32m✓ PASS[0m  different EI → INTENT_MISMATCH
+
+[1m[36mV05 — Scope function enforcement[0m
+  [32m✓ PASS[0m  delete_record not in scope functions
+  [32m✓ PASS[0m  transfer_funds in scope functions
+
+[1m[36mV06 — Target pattern matching[0m
+  [32m✓ PASS[0m  bank:acct:XYZ matches bank:acct:*
+  [32m✓ PASS[0m  jira:PROJECT matches jira:*
+  [32m✓ PASS[0m  random:target does not match
+  [32m✓ PASS[0m  bank:other does not match
+
+[1m[36mV07 — Authority state checks[0m
+  [32m✓ PASS[0m  revoked authority → REVOKED
+  [32m✓ PASS[0m  expired authority → AUTHORITY_EXPIRED
+  [32m✓ PASS[0m  non-active state → AUTHORITY_NOT_ACTIVE
+
+[1m[36mV08 — Replay guard[0m
+  [32m✓ PASS[0m  first submission passes gate
+  [32m✓ PASS[0m  second submission → REPLAY
+
+[1m[36mV09 — Permit TTL expiry[0m
+  [32m✓ PASS[0m  expired permit → EXPIRED
+
+[1m[36mV10 — Artifact chain linkage[0m
+  [32m✓ PASS[0m  first artifact prev_hash == GENESIS
+  [32m✓ PASS[0m  second artifact prev_hash == sha256(first AA)
+
+[1m[36mV11 — Artifact signature field binding[0m
+  [32m✓ PASS[0m  valid AA signature verifies
+  [32m✓ PASS[0m  mutated AA decision → sig invalid
+
+[1m[36mV12 — Policy hash check[0m
+  [32m✓ PASS[0m  stale policy_hash → POLICY_MISMATCH
+
+[1m[36mV13 — Artifact snapshot verification[0m
+  [32m✓ PASS[0m  clean artifact → VALID
+  [32m✓ PASS[0m  cp_signature check passes
+  [32m✓ PASS[0m  policy_hash check passes
+  [32m✓ PASS[0m  AR state hash check passes
+  [32m✓ PASS[0m  scope_hash check passes
+  [32m✓ PASS[0m  result_hash check passes
+  [32m✓ PASS[0m  chain_linkage check passes
+  [32m✓ PASS[0m  tampered AR snapshot → INVALID
+  [32m✓ PASS[0m  authority_state_hash check fails
+
+[1m[36mV14 — Full ADMIT flow end-to-end[0m
+  [32m✓ PASS[0m  authority is ACTIVE
+  [32m✓ PASS[0m  function in scope
+  [32m✓ PASS[0m  target matches scope
+  [32m✓ PASS[0m  permit issued with correct principal
+  [32m✓ PASS[0m  permit intent_hash matches EI
+  [32m✓ PASS[0m  gate passes
+  [32m✓ PASS[0m  artifact decision == ADMIT
+  [32m✓ PASS[0m  ADMIT artifact verifies VALID
+
+[1m[36mV15 — Full DENY flow (revoke then run)[0m
+  [32m✓ PASS[0m  gate rejects after revocation
+  [32m✓ PASS[0m  DENY artifact produced
+  [32m✓ PASS[0m  DENY reason_code == REVOKED
+  [32m✓ PASS[0m  DENY artifact verifies VALID
+
+══════════════════════════════════════════════════
+[1m49 checks  ·  [32m49 passed[0m[1m  ·  [32m0 failed[0m
+══════════════════════════════════════════════════

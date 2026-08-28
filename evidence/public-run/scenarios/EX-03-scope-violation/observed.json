@@ -1,0 +1,23 @@
+{
+  "propose": {
+    "artifact": {
+      "artifact_id": "aa:c2565774-8578-496a-a1f7-0ffc005803a2",
+      "authority_id": "auth:alice:001",
+      "authority_state_hash": "9f4d9ad8ad9bb9848ea069ce2efbe1fff5f601ea72134b8283477c72397e79a4",
+      "cp_signature": "zkU0rMyMlNotwE-vtEBL6GT_hXtQAeOAMIN6hY4aCB0-SZqK0x6JIABJTXvEVQYeIxl-jMjFpy1YjPQesZOrBA",
+      "decision": "DENY",
+      "intent_hash": "09fe691718b932a487f8c1690b71cdb7a46317e940b1b7dc1e000d4fe24d9709",
+      "nonce": null,
+      "permit_id": null,
+      "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+      "prev_artifact_hash": "aeebad4a796fcc2e15dc4c6061b45ed9b373f26adfc798ca7d2d8cc58182718e",
+      "principal_id": "principal:alice",
+      "reason_code": "SCOPE_FAIL",
+      "result_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "scope_hash": "af6019d35f03297e649a2ea5a4ddd9fc56ae5a507a51c55ca8fb8a8628390bba",
+      "timestamp": 1787815309
+    },
+    "decision": "DENY",
+    "reason_code": "SCOPE_FAIL"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "chain": [
+    {
+      "artifact": {
+        "artifact_id": "aa:5999a447-959a-4d7a-8562-e5c9c2f9cd02",
+        "authority_id": "unknown",
+        "authority_state_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "cp_signature": "8eGBm2vGbFbCAqdNB1vd0s1Evny8f3d3C0uQ92LhkHfKnaBzvtdcXhTiohFtX2MeeW30zhKhBdKLLP1e7_LuBw",
+        "decision": "DENY",
+        "intent_hash": "6b466012b65f9ea13fc955197729f68576d0b5bd431a958943d0799d8a2ca11c",
+        "nonce": null,
+        "permit_id": null,
+        "policy_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+        "prev_artifact_hash": "aeebad4a796fcc2e15dc4c6061b45ed9b373f26adfc798ca7d2d8cc58182718e",
+        "principal_id": "principal:alice",
+        "reason_code": "NO_PERMIT",
+        "result_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "scope_hash": "b23a6a8439c0dde5515893e7c90c1e3233b8616e634470f20dc4928bcf3609bc",
+        "timestamp": 1787815309
+      },
+      "snapshots": {
+        "ar": {},
+        "policy": {
+          "current_hash": "fa8b919c909d5eb9e373d090928170eb0e7936ac20ccf413332b96520903168e",
+          "description": "MVP baseline policy",
+          "version": "v1.0"
+        },
+        "result": null,
+        "se": {}
+      }
+    }
+  ],
+  "length": 1
+}
